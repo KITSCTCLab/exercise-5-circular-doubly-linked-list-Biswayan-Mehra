@@ -8,33 +8,30 @@ class Node:
 class DoublyCircularLinkedList:
     def __init__(self):
         self.head = None
-        self.front = new Node()
-        self.end = new Node()
+        self.tail = None
         self.count = 0
 
     def add_at_tail(self, data) -> bool:
         # Write code here
-        temp = new Node()
-        this.temp.data = data;
-        temp.previous = self.end;
+        temp = new Node(data)
+        temp.previous = self.tail;
         temp.next = NULL;
-        if(self.end == NULL)
-        self.front = temp;
+        if(self.tail == NULL)
+        self.head = temp;
         else
-        self.end.next = temp;
-        self.end = temp;
+        self.tail.next = temp;
+        self.tail = temp;
 
     def add_at_head(self, data) -> bool:
         # Write code here
-        temp = new Node()
-        this.temp.data = data;
+        temp = new Node(data)
         temp.previous = NULL;
-        temp.next = front;
-        if(self.front == NULL)
-        self.end = temp;
+        temp.next = self.head;
+        if(self.head == NULL)
+        self.tail = temp;
         else
-        self.front.previous = temp;
-        self.front = temp;
+        self.head.previous = temp;
+        self.head = temp;
 
     def add_at_index(self, index, data) -> bool:
         # Write code here
