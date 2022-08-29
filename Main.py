@@ -35,12 +35,33 @@ class DoublyCircularLinkedList:
 
     def add_at_index(self, index, data) -> bool:
         # Write code here
-
+        temp = new node(data)
+        temp.previous = index
+        temp.next = index.next
+        index.next = temp
+        if(index.previous == NULL):
+            self.head = temp
+        if(index.next == NULL):
+            self.tail = temp
+        
     def get(self, index) -> int:
         # Write code here
 
     def delete_at_index(self, index) -> bool:
         # Write code here
+        if(index.previous == None){
+            self.head = index.next
+            self.head.previous = None
+        }
+        else if(index.next == None){
+            self.tail = index.previous
+            self.tail.next = None
+        }
+        else{
+            index.previous.next = index.next
+            index.next.previous = index.previous
+        }
+        remove(index)
 
     def get_previous_next(self, index) -> list:
         # Write code here
