@@ -35,7 +35,7 @@ class DoublyCircularLinkedList:
 
     def add_at_index(self, index, data) -> bool:
         # Write code here
-        temp = new node(data)
+        temp = Node(data)
         temp.previous = index
         temp.next = index.next
         index.next = temp
