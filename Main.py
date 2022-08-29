@@ -13,7 +13,7 @@ class DoublyCircularLinkedList:
 
     def add_at_tail(self, data) -> bool:
         # Write code here
-        temp = new Node(data)
+        temp = Node(data)
         temp.previous = self.tail;
         temp.next = NULL;
         if(self.tail == NULL)
@@ -24,7 +24,7 @@ class DoublyCircularLinkedList:
 
     def add_at_head(self, data) -> bool:
         # Write code here
-        temp = new Node(data)
+        temp = Node(data)
         temp.previous = NULL;
         temp.next = self.head;
         if(self.head == NULL)
