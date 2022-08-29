@@ -16,7 +16,7 @@ class DoublyCircularLinkedList:
         temp = Node(data)
         temp.previous = self.tail;
         temp.next = None;
-        if(self.tail == None)
+        if(self.tail is None)
         self.head = temp;
         else
         self.tail.next = temp;
@@ -27,7 +27,7 @@ class DoublyCircularLinkedList:
         temp = Node(data)
         temp.previous = None;
         temp.next = self.head;
-        if(self.head == None)
+        if(self.head is None)
         self.tail = temp;
         else
         self.head.previous = temp;
