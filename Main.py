@@ -47,7 +47,7 @@ class DoublyCircularLinkedList:
     def get(self, index) -> int:
         # Write code here
         trav = self.head
-        while(trav != None){
+        while(trav != None):{
             return trav.data
             trav = trav.next
         }
@@ -56,15 +56,15 @@ class DoublyCircularLinkedList:
 
     def delete_at_index(self, index) -> bool:
         # Write code here
-        if(index.previous == None){
+        if(index.previous == None):{
             self.head = index.next
             self.head.previous = None
         }
-        else if(index.next == None){
+        else if(index.next == None):{
             self.tail = index.previous
             self.tail.next = None
         }
-        else{
+        else:{
             index.previous.next = index.next
             index.next.previous = index.previous
         }
